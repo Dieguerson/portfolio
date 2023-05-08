@@ -1,3 +1,5 @@
+/*Mi teoría del color es claramente inexistente. Los colores no funcionan muy bien entre sí, ni con el fondo.*/
+
 * {
   margin: unset;
   padding: unset;
@@ -24,6 +26,7 @@
   margin: 16px auto 8px;
   font-weight: 500;
   font-size: 32px;
+  text-align: center;
 }
 
 .subtitle {
@@ -53,19 +56,20 @@
   flex-flow: row wrap;
   border: 3px solid #B200ED;
   background: #c478de;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   gap: 8px;
   padding: 8px;
   border-radius: 8px;
   color: #000000;
   max-width: 340px;
-  height: 200px;
+  min-height: 200px;
 }
 
 .project_title {
   text-align: center;
   width: 100%;
+  align-self: start;
 }
 
 .project_img {
@@ -75,6 +79,7 @@
 
 .project_description {
   max-width: 70%;
+  flex-grow: 1;
 }
 
 .buttons {
@@ -82,6 +87,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid #000000;
+  align-self: end;
+  padding-top: 4px;
 }
 
 .partitioner {
@@ -99,7 +107,6 @@
   font-weight: 700;
   color: #FFFFFF;
 }
-
 
 .networks {
   display: flex;
@@ -122,4 +129,15 @@
   height:32px;
   filter: invert(100%);
   margin: auto;
+}
+
+@media (min-width: 768px) {
+  .projects {
+    flex-flow: row wrap;
+  }
+
+  .projects > h3 {
+    text-align: center;
+    width: 100%;
+  }
 }
